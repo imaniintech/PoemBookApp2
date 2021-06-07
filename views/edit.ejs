@@ -9,9 +9,10 @@
 </head>
 <body>
 
-    <div class="card">
+    <div id="book-image" class="card">
         <div class="card-body">
         <h3 class="mb-5">Edit Poem</h3>
+        <a href="https://ibb.co/6sTRzn9"><img class="book-image" src="https://i.ibb.co/GP8vyxY/1495749805-Black-Book-PNG-Clip-Art.png" alt="1495749805-Black-Book-PNG-Clip-Art" width="100"></a>
              <form action="/poems/<%= poem.id %>?_method=PUT" method="post">
                 <div class="card">
                     <div class="card-body">
@@ -77,6 +78,15 @@
     }
     a{
         color: white;
+    }
+    #book-image {
+  position:relative;
+    }
+
+    .book-image {
+        position:absolute;
+        top:0;
+        right:600px;
     }
 </style>
 </html>

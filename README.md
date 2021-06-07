@@ -47,6 +47,7 @@ There will also be a login page for each user to either create a profile or to s
 <br>
 <h4>Unsolved Problems</h4>
 <li>When clicking to edit a poem. All the information has to be re entered.</li>
+<li>Getting book png to stick in place on page.</li>
 <br>
 <h4>Notes To Self
 <ul>
