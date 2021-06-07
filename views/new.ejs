@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>Create New Poem</title>
 </head>
 <body>
-    <div class = "container">
+    <div class = "card">
         <h1>Create a New Poem</h1>
         <nav>
             <button><a href="/poems">Back to Poem Index</a></button>
         </nav>
         <div class = "poem">
-            <br/>
-            <br/>
             <form action="/poems/new" method="post">
-                <input type = "text" name = "title" id = "title" placeholder="Title"/>
-                <input type = "text" name = "tags" id = "tags" placeholder="Descriptive Tags"/>
-                <input type = "text" name = "content" id = "content" placeholder="Content"/>
+                <div class="card-title form-group">
+                    <label for="title"><strong>Title</strong></label>
+                    <input type = "text" name = "title" id = "title" placeholder="Title"/>
+                </div>
 
-                <input type = "submit" value = "Click to Create Poem">
+                <div class="card-subtitle form-group">
+                    <label for="tags"><strong>Descriptive Tags</strong></label>
+                    <textarea name="tags" id="tags" class="form-control" required></textarea>
+                </div>
+
+                <div class="card-text mb-5 form-group">
+                    <label for="content"><strong>Content</strong></label>
+                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" required></textarea>
+                </div>
+                
+
+                <input type = "submit" value = "Click to Create Poem">   
             </form>
         </div>
     </div>
