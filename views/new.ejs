@@ -28,14 +28,15 @@
                     <textarea name="tags" id="tags" class="form-control" placeholder="Descriptive Tags" required></textarea>
                 </div>
 
-                <div class="card-text mb-5 form-group">
+                <div class="card-text mb-3 form-group">
                     <textarea name="content" id="content" cols="30" rows="10" class="form-control" placeholder="Poem's content" required></textarea>
                 </div>
             </div>
-        </div>
-                
-                <a href="/poems" class="cancel btn btn-outline-secondary">Cancel</a>
-                <input type = "submit" class="create" value = "Click to Create Poem">   
+
+            <div class="form-group ml-4">
+                <input type = "submit" class="create" value = "Click to Create Poem"> 
+            </div>
+        </div> 
 
             </form>
         </div>
@@ -73,6 +74,7 @@
     .cancel{
         background-image: linear-gradient(45deg, black, gray, grey,  black);
         color: white;
+        margin-bottom: 10px;
     }
 </style>
 </html>
