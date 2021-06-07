@@ -26,7 +26,6 @@
                     </div>
 
                     <a href="poems/<%= poem.id %>" class="read btn btn-dark">Read Poem</a> 
-                    <!--clicks into each individual poem to read poem's content-->
                     
                     <form action="/poems/<%= poem.id %>?_method=DELETE" method="POST" class="d-inline">
                         <button type="submit" class="btn btn-danger">Delete Poem</button>
@@ -38,4 +37,20 @@
 
     
 </body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+body{
+    background-color: #c0c0c0;
+    background-image: linear-gradient(45deg, black, white, gray, grey, white, black);
+}
+h1{
+    text-align: center;
+    font-family: 'Limelight', cursive;
+    font-size: 80px;
+    text-shadow: 3px 2px lightgray;
+    text-transform: uppercase;
+}
+</style>
 </html>
