@@ -11,21 +11,21 @@ router.use(methodOverride('_method'));
 const Poem = require('../models/poems');
 
 
-// // INDEX
-// router.get("/", (req, res) => {
-//     res.send('index.ejs')
-//     Poem.find({}, (error, allPoems) => {
-//         if (error) {
-//             res.send(error)
-//         } else {
-//             res.render("index.ejs", {
-//                 poems: allPoems
-//             });
-//         };
-//     });
-// });
+// INDEX
+router.get("/", (req, res) => {
+    res.send('index.ejs')
+    Poem.find({}, (error, allPoems) => {
+        if (error) {
+            res.send(error)
+        } else {
+            res.render("index.ejs", {
+                poems: allPoems
+            });
+        };
+    });
+});
 
-router.
+
 
 
 
