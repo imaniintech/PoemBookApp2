@@ -51,6 +51,7 @@ There will also be a login page for each user to either create a profile or to s
 <br>
 <h4>Notes To Self
 <ul>
+<li>Needs editing formats<li>
 <li>Needs a signup/login page with an encrypted password and authorization flow</li>
 <li>Add features to where other users can search tags to find public/shared poems and lyrics</li>
 <li>Users can like / comment on public/shared poems and lyrics</li>
