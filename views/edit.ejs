@@ -4,41 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Edit poem</title>
 </head>
 <body>
+
     <div class="card">
         <div class="card-body">
-        <h3 class="mb-3">Edit Poem</h3>
+        <h3 class="mb-5">Edit Poem</h3>
+             <form action="/poems/new" method="post">
+                <div class="card">
+                    <div class="card-body">
 
-        <form action="/poems/<%= poem.id %>?_method=PUT" method="POST">
-            <div class="card">
-                <div class="card-body">
-                <div class="card-title form-group">
-                    <label for="title"><strong>Title</strong></label>
-                    <input value="<%= poem.title %>" class="form-control" type="text" name="title" id="title" required>
-                </div>
+                <nav class="mb-5">
+                    <button class="cancel btn btn-outline-secondary" ><a href="/poems">Back to Poem Book</a></button>
+                </nav>
                 
-                <div class="card-subtitle form-group">
-                    <label for="tags"><strong>Descriptive Tags</strong></label>
-                    <textarea name="tags" id="tags" class="form-control"> 
-                        <%= poem.tags %>
-                    </textarea>
+                <div class="card-title form-group mb-3">
+                    <input type = "text" name = "title" id = "title" placeholder="Title"/>
                 </div>
-                
-                <div class="card-text mb-5 form-group">
-                    <label for="content"><strong>Content</strong></label>
-                    <textarea name="content" id="content" class="form-control" required > 
-                        <%= poem.content %>
-                    </textarea>
-                    </div>
+
+                <div class="card-subtitle form-group mb-3">
+                    <textarea name="tags" id="tags" class="form-control" placeholder="Descriptive Tags" required></textarea>
                 </div>
+
+                <div class="card-text mb-3 form-group">
+                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" placeholder="Poem's content" required></textarea>
                 </div>
-                
-                <a href="/poems" class="cancel btn btn-outline-secondary">Cancel</a>
-                <button type="submit" class="create btn btn-outline-dark">Create Poem</button>                
-       </form> 
+            </div>
+
+            <div class="form-group ml-4">
+                <input type = "submit" class="create" value = "Click to Create Poem"> 
+            </div>
+        </div> 
+
+            </form>
         </div>
     </div>
 </body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+    body{
+        background-color: #c0c0c0;
+    }
+    h3{
+        font-family: 'Limelight', cursive;
+        font-size: 60px;
+        color: black;
+        text-shadow: 3px 3px lightgray;
+        text-transform: uppercase;
+    }
+    .card{
+        background-image: linear-gradient(45deg, black, gray, white, black);
+    }
+    .card-title{
+        color: white;
+    }
+    .card-text{
+        color: white;
+    }
+    label{
+        color: white;
+    }
+    .create{
+        background-image: linear-gradient(45deg, black, gray, grey,  black);
+        color: white;
+    }
+    .cancel{
+        background-image: linear-gradient(45deg, black, gray, grey,  black);
+        margin-bottom: 10px;
+    }
+    a{
+        color: white;
+    }
+</style>
 </html>
