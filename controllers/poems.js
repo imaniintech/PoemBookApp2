@@ -71,16 +71,6 @@ router.put("/:id", (req, res) => {
 
 });
 
-// BUY
-router.put("/buy/:id/:qty", (req, res) => {
-    Poem.findByIdAndUpdate(req.params.id, {qty: req.params.qty - 1}, {new: true}, (error, boughtPoem) => {
-        if (error) {
-            console.log(error)
-        } else {
-           res.redirect(`/poems/${req.params.id}`) 
-        };
-    });
-});
 
 // DELETE
 router.delete("/:id", (req, res) => {
