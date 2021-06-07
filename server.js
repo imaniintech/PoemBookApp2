@@ -2,6 +2,7 @@
 //Dependencies
 //___________________
 const express = require('express');
+const router = express.Router();
 const methodOverride  = require('method-override');
 const mongoose = require ('mongoose');
 const app = express ();
@@ -45,14 +46,23 @@ app.use(express.json());// returns middleware that only parses JSON - may or may
 //use method override
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
-const poems = require('./models/poems.js')
-//___________________
+const Poem = require('./models/poems.js')
+
+const poemController = require("./controllers/poems.js");
+
+
+
+// ___________________
 // Routes
-//___________________
+// ___________________
 //localhost:5000
 app.get('/' , (req, res) => {
-  res.send('Poem Schema Updated.');
-});
+    res.render('index.ejs');
+  });
+
+
+
+  app.use("/poems", poemController);
 
 //___________________
 //Listener
