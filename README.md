@@ -20,7 +20,7 @@ I love reading poems, writing poems and creating lyrics. I've use a lot of noteb
 </p>
 
 <br>
-<br>
+
 
 <h3>Unsolved Problems</h3>
 <ul>
