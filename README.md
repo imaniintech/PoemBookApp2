@@ -24,11 +24,17 @@ I love reading poems, writing poems and creating lyrics. I've use a lot of noteb
 <br>
 <h4>Purpose</h4>
 <p>The purpose of my app is to allow users to express themselves in a poetic way (or even in a story mode). In a way, I'd call it a poem book but in other ways, it's a diary designed strictly for the user. Users can easily keep up with their thoughts and creative writings through this app.
+</p>
 <br>
+<p>
 At this point in my app, only the initial user can make any changes to it but I would like for it to also have a collaborative space for all users to engage with one another. Rather its editing another user's poem, liking the poem, commenting on the poem, or creating a story line/poem together.
+</p>
 <br>
+<p>
 It's a way for users to put themselves out there. But no worries, if you're not bold enough to put yourself into the internet world, there will be a section to where you can make your poem book public or private.
+</p>
 <br>
+<p>
 There will also be a login page for each user to either create a profile or to sign into their profile.
 </p>
 
