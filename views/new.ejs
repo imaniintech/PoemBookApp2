@@ -9,30 +9,33 @@
     <title>Create New Poem</title>
 </head>
 <body>
-    <div class = "container">
-        <h3>Create a New Poem</h3>
-        <nav>
-            <button><a href="/poems">Back to Poem Index</a></button>
-        </nav>
-        <div class = "card">
-            <form action="/poems/new" method="post">
-                <div class="card-title form-group">
-                    <label for="title"><strong>Title</strong></label>
+    <div class="card">
+        <div class="card-body">
+        <h3 class="mb-5">Create Poem</h3>
+             <form action="/poems/new" method="post">
+                <div class="card">
+                    <div class="card-body">
+
+                <nav class="mb-5">
+                    <button class="cancel btn btn-outline-secondary" ><a href="/poems">Back to Poem Index</a></button>
+                </nav>
+                
+                <div class="card-title form-group mb-3">
                     <input type = "text" name = "title" id = "title" placeholder="Title"/>
                 </div>
 
-                <div class="card-subtitle form-group">
-                    <label for="tags"><strong>Descriptive Tags</strong></label>
-                    <textarea name="tags" id="tags" class="form-control" required></textarea>
+                <div class="card-subtitle form-group mb-3">
+                    <textarea name="tags" id="tags" class="form-control" placeholder="Descriptive Tags" required></textarea>
                 </div>
 
                 <div class="card-text mb-5 form-group">
-                    <label for="content"><strong>Content</strong></label>
-                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" required></textarea>
+                    <textarea name="content" id="content" cols="30" rows="10" class="form-control" placeholder="Poem's content" required></textarea>
                 </div>
+            </div>
+        </div>
                 
                 <a href="/poems" class="cancel btn btn-outline-secondary">Cancel</a>
-                <input type = "submit" value = "Click to Create Poem">   
+                <input type = "submit" class="create" value = "Click to Create Poem">   
 
             </form>
         </div>
