@@ -11,6 +11,30 @@
     <div class="container">
 
         <h1 class="mb-5">Poem Book</h1>
+        <a href="/poems/new" class="create btn btn-outline-dark">Create a Poem</a>
         
+        <% poems.forEach(poem => { %>
+            <div class="card mt-2">
+
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <%= poem.title %>
+                    </h4>
+                    <div class="card-subtitle text-muted mb-2">
+                        <%= poem.createDate.toLocaleDateString() %>
+                    </div>
+                    <div class="card-text mb-4">
+                        <%= poem.tags %>
+                    </div>
+
+                    <a href="poems/<%= poem.id %>" class="read btn btn-dark">Read Poem</a> 
+                    <!--clicks into each individual poem to read poem's content-->
+                    
+                    <form action="/poems/<%= poem.id %>?_method=DELETE" method="POST" class="d-inline">
+                        <button type="submit" class="btn btn-danger">Delete Poem</button>
+                    </form>
+                </div>
+            </div>
+       <% }) %>
     </div>
 </body>
