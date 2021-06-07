@@ -11,7 +11,7 @@ const db = mongoose.connection;
 //Port
 //___________________
 // Allow use of Heroku's port or your own local port, depending on the environment
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 //___________________
 //Database
@@ -52,14 +52,6 @@ const poemController = require("./controllers/poems.js");
 
 
 
-// ___________________
-// Routes
-// ___________________
-//localhost:5000
-app.get('/' , (req, res) => {
-    res.render('index.ejs');
-  });
-
 
 
   app.use("/poems", poemController);
@@ -68,7 +60,3 @@ app.get('/' , (req, res) => {
 //Listener
 //___________________
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
-
-
-
-

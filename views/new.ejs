@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Poem</title>
+</head>
+<body>
+    <div class = "container">
+        <h1>Create a New Poem</h1>
+        <nav>
+            <button><a href="/poems">Back to Poem Index</a></button>
+        </nav>
+        <div class = "poem">
+            <br/>
+            <br/>
+            <form action="/poems/new" method="post">
+                <input type = "text" name = "title" id = "title" placeholder="Title"/>
+                <input type = "text" name = "tags" id = "tags" placeholder="Descriptive Tags"/>
+                <input type = "text" name = "content" id = "content" placeholder="Content"/>
+
+                <input type = "submit" value = "Click to Create Poem">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

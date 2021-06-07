@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit poem</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+        <h3 class="mb-3">Edit Poem</h3>
+
+        <form action="/poems/<%= poem.id %>?_method=PUT" method="POST">
+            <div class="card">
+                <div class="card-body">
+                <div class="card-title form-group">
+                    <label for="title"><strong>Title</strong></label>
+                    <input value="<%= poem.title %>" class="form-control" type="text" name="title" id="title" required>
+                </div>
+                
+                <div class="card-subtitle form-group">
+                    <label for="tags"><strong>Descriptive Tags</strong></label>
+                    <textarea name="tags" id="tags" class="form-control"> 
+                        <%= poem.tags %>
+                    </textarea>
+                </div>
+                
+                <div class="card-text mb-5 form-group">
+                    <label for="content"><strong>Content</strong></label>
+                    <textarea name="content" id="content" class="form-control" required > 
+                        <%= poem.content %>
+                    </textarea>
+                    </div>
+                </div>
+                </div>
+                
+                <a href="/poems" class="cancel btn btn-outline-secondary">Cancel</a>
+                <button type="submit" class="create btn btn-outline-dark">Create Poem</button>                
+       </form> 
+        </div>
+    </div>
+</body>
+</html>

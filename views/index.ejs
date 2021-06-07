@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Poem/Lyric Book</title>
+    <title>Poems Index</title>
 </head>
 <body>
-    <div class="container">
+
+<div class="container">
 
         <h1 class="mb-5">Poem Book</h1>
         <a href="/poems/new" class="create btn btn-outline-dark">Create a Poem</a>
@@ -20,9 +20,7 @@
                     <h4 class="card-title">
                         <%= poem.title %>
                     </h4>
-                    <div class="card-subtitle text-muted mb-2">
-                        <%= poem.createDate.toLocaleDateString() %>
-                    </div>
+        
                     <div class="card-text mb-4">
                         <%= poem.tags %>
                     </div>
@@ -37,4 +35,7 @@
             </div>
        <% }) %>
     </div>
+
+    
 </body>
+</html>

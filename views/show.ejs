@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Poem</title>
+</head>
+<body>
+    <div class = "container">
+        <h3><%= poem.title%></h3>
+        <nav>
+            <button><a href="/poems">Poem Index</a></button>
+        </nav>
+        <div class = "poem">
+            <h5><%= poem.tags %></h5>
+            <h6><%= poem.content %></h6>
+    
+            <button class = "edit"><a class = "edit" href = "/poems/<%= poem.id %>/edit">Click to Edit poem</a></button>
+            <br/>
+            <form action = "/poems/<%= poem.id %>?_method=delete" method = "post">
+                <input type = "submit" value = "Click to Delete Poem"/>
+            </form>
+        </div>
+    </div>
+
+  
+</body>
+</html>
