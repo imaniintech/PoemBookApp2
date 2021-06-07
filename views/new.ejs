@@ -9,12 +9,12 @@
     <title>Create New Poem</title>
 </head>
 <body>
-    <div class = "card">
-        <h1>Create a New Poem</h1>
+    <div class = "container">
+        <h3>Create a New Poem</h3>
         <nav>
             <button><a href="/poems">Back to Poem Index</a></button>
         </nav>
-        <div class = "poem">
+        <div class = "card">
             <form action="/poems/new" method="post">
                 <div class="card-title form-group">
                     <label for="title"><strong>Title</strong></label>
@@ -31,10 +31,45 @@
                     <textarea name="content" id="content" cols="30" rows="10" class="form-control" required></textarea>
                 </div>
                 
-
+                <a href="/poems" class="cancel btn btn-outline-secondary">Cancel</a>
                 <input type = "submit" value = "Click to Create Poem">   
+
             </form>
         </div>
     </div>
 </body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+
+    body{
+        background-color: #c0c0c0;
+    }
+    h3{
+        font-family: 'Limelight', cursive;
+        font-size: 60px;
+        color: black;
+        text-shadow: 3px 3px lightgray;
+        text-transform: uppercase;
+    }
+    .card{
+        background-image: linear-gradient(45deg, black, gray, white, black);
+    }
+    .card-title{
+        color: white;
+    }
+    .card-text{
+        color: white;
+    }
+    label{
+        color: white;
+    }
+    .create{
+        background-image: linear-gradient(45deg, black, gray, grey,  black);
+        color: white;
+    }
+    .cancel{
+        background-image: linear-gradient(45deg, black, gray, grey,  black);
+        color: white;
+    }
+</style>
 </html>
